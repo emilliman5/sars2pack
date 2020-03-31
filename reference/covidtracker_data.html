@@ -162,46 +162,46 @@ district currently reporting that data.</p>
 
 <p>Other data-import: 
 <code><a href='jhu_data.html'>jhu_data</a>()</code>,
-<code>nytimes_county_data()</code>,
-<code>us_county_geo_details()</code>,
-<code>us_healthcare_capacity()</code>,
+<code><a href='nytimes_county_data.html'>nytimes_county_data</a>()</code>,
+<code><a href='us_county_geo_details.html'>us_county_geo_details</a>()</code>,
+<code><a href='us_healthcare_capacity.html'>us_healthcare_capacity</a>()</code>,
 <code><a href='usa_facts_data.html'>usa_facts_data</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>covidtracker_data</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
 #&gt; <span class='message'>cols(</span>
-#&gt; <span class='message'>  date = <span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  state = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
-#&gt; <span class='message'>  positive = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  negative = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  pending = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  hospitalized = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  death = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  total = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  hash = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
-#&gt; <span class='message'>  dateChecked = </span><span style='color: #0000BB;'>col_datetime(format = "")</span><span>,</span>
-#&gt; <span class='message'>  totalTestResults = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  fips = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
-#&gt; <span class='message'>  deathIncrease = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  hospitalizedIncrease = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  negativeIncrease = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  positiveIncrease = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  totalTestResultsIncrease = </span><span style='color: #00BB00;'>col_double()</span><span></span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1,317 x 9</span><span>
+#&gt; <span class='message'>  date = col_double(),</span>
+#&gt; <span class='message'>  state = col_character(),</span>
+#&gt; <span class='message'>  positive = col_double(),</span>
+#&gt; <span class='message'>  negative = col_double(),</span>
+#&gt; <span class='message'>  pending = col_double(),</span>
+#&gt; <span class='message'>  hospitalized = col_double(),</span>
+#&gt; <span class='message'>  death = col_double(),</span>
+#&gt; <span class='message'>  total = col_double(),</span>
+#&gt; <span class='message'>  hash = col_character(),</span>
+#&gt; <span class='message'>  dateChecked = col_datetime(format = ""),</span>
+#&gt; <span class='message'>  totalTestResults = col_double(),</span>
+#&gt; <span class='message'>  fips = col_character(),</span>
+#&gt; <span class='message'>  deathIncrease = col_double(),</span>
+#&gt; <span class='message'>  hospitalizedIncrease = col_double(),</span>
+#&gt; <span class='message'>  negativeIncrease = col_double(),</span>
+#&gt; <span class='message'>  positiveIncrease = col_double(),</span>
+#&gt; <span class='message'>  totalTestResultsIncrease = col_double()</span>
+#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; # A tibble: 1,373 x 9
 #&gt;    date       state positive negative pending hospitalized death
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> 2020-03-29 AK         102     </span><span style='text-decoration: underline;'>3</span><span>232      </span><span style='color: #BB0000;'>NA</span><span>            6     2
-#&gt; </span><span style='color: #555555;'> 2</span><span> 2020-03-29 AL         806     </span><span style='text-decoration: underline;'>4</span><span>184      </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>     4
-#&gt; </span><span style='color: #555555;'> 3</span><span> 2020-03-29 AR         426     </span><span style='text-decoration: underline;'>3</span><span>027      </span><span style='color: #BB0000;'>NA</span><span>           48     6
-#&gt; </span><span style='color: #555555;'> 4</span><span> 2020-03-29 AS          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>      </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>     0
-#&gt; </span><span style='color: #555555;'> 5</span><span> 2020-03-29 AZ         919    </span><span style='text-decoration: underline;'>12</span><span>953      </span><span style='color: #BB0000;'>NA</span><span>           78    17
-#&gt; </span><span style='color: #555555;'> 6</span><span> 2020-03-29 CA        </span><span style='text-decoration: underline;'>5</span><span>708    </span><span style='text-decoration: underline;'>20</span><span>549   </span><span style='text-decoration: underline;'>64</span><span>400         </span><span style='text-decoration: underline;'>1</span><span>034   123
-#&gt; </span><span style='color: #555555;'> 7</span><span> 2020-03-29 CO        </span><span style='text-decoration: underline;'>2</span><span>061    </span><span style='text-decoration: underline;'>11</span><span>215      </span><span style='color: #BB0000;'>NA</span><span>          274    44
-#&gt; </span><span style='color: #555555;'> 8</span><span> 2020-03-29 CT        </span><span style='text-decoration: underline;'>1</span><span>993     </span><span style='text-decoration: underline;'>9</span><span>907      </span><span style='color: #BB0000;'>NA</span><span>          404    34
-#&gt; </span><span style='color: #555555;'> 9</span><span> 2020-03-29 DC         342     </span><span style='text-decoration: underline;'>2</span><span>469       1           </span><span style='color: #BB0000;'>NA</span><span>     5
-#&gt; </span><span style='color: #555555;'>10</span><span> 2020-03-29 DE         232       36      </span><span style='color: #BB0000;'>NA</span><span>           33     6
-#&gt; </span><span style='color: #555555;'># … with 1,307 more rows, and 2 more variables: dateChecked </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, fips </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div><div class='input'>
-</div></span></pre>
+#&gt;    &lt;date&gt;     &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;
+#&gt;  1 2020-03-30 AK         114     3540      NA            7     3
+#&gt;  2 2020-03-30 AL         859     5694      NA           NA     6
+#&gt;  3 2020-03-30 AR         473     5262      NA           62     7
+#&gt;  4 2020-03-30 AS          NA       NA      NA           NA     0
+#&gt;  5 2020-03-30 AZ        1157    15602      NA           78    20
+#&gt;  6 2020-03-30 CA        6447    20549   64400         1432   133
+#&gt;  7 2020-03-30 CO        2627    12737      NA          414    51
+#&gt;  8 2020-03-30 CT        2571    12029      NA          517    36
+#&gt;  9 2020-03-30 DC         401     2682       2           NA     9
+#&gt; 10 2020-03-30 DE         264     2216      NA           45     6
+#&gt; # … with 1,363 more rows, and 2 more variables: dateChecked &lt;dttm&gt;, fips &lt;chr&gt;</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

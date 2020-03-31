@@ -154,47 +154,47 @@ resolution (by facility, daily, all USA to start).</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other data-import: 
-<code>covidtracker_data()</code>,
+<code><a href='covidtracker_data.html'>covidtracker_data</a>()</code>,
 <code><a href='jhu_data.html'>jhu_data</a>()</code>,
-<code>nytimes_county_data()</code>,
-<code>us_county_geo_details()</code>,
+<code><a href='nytimes_county_data.html'>nytimes_county_data</a>()</code>,
+<code><a href='us_county_geo_details.html'>us_county_geo_details</a>()</code>,
 <code><a href='usa_facts_data.html'>usa_facts_data</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>us_healthcare_capacity</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
 #&gt; <span class='message'>cols(</span>
 #&gt; <span class='message'>  .default = col_character(),</span>
-#&gt; <span class='message'>  Zipcode = <span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  Latitude = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  Longitude = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `Staffed All Beds` = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `Staffed ICU Beds` = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `Licensed All Beds` = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `All Bed Occupancy Rate` = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `ICU Bed Occupancy Rate` = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  CCM_ID = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  `DH-OBJECTID` = </span><span style='color: #00BB00;'>col_double()</span><span></span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6,348 x 23</span><span>
+#&gt; <span class='message'>  Zipcode = col_double(),</span>
+#&gt; <span class='message'>  Latitude = col_double(),</span>
+#&gt; <span class='message'>  Longitude = col_double(),</span>
+#&gt; <span class='message'>  `Staffed All Beds` = col_double(),</span>
+#&gt; <span class='message'>  `Staffed ICU Beds` = col_double(),</span>
+#&gt; <span class='message'>  `Licensed All Beds` = col_double(),</span>
+#&gt; <span class='message'>  `All Bed Occupancy Rate` = col_double(),</span>
+#&gt; <span class='message'>  `ICU Bed Occupancy Rate` = col_double(),</span>
+#&gt; <span class='message'>  CCM_ID = col_double(),</span>
+#&gt; <span class='message'>  `DH-OBJECTID` = col_double()</span>
+#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; # A tibble: 6,348 x 23
 #&gt;    Name  `Hospital Type` Address Address_2 City  State Zipcode County Latitude
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> Cree… Psychiatric Ho… 1025 E… </span><span style='color: #BB0000;'>NA</span><span>        King… TN      </span><span style='text-decoration: underline;'>37</span><span>660 Sulli…     36.5
-#&gt; </span><span style='color: #555555;'> 2</span><span> Indi… Short Term Acu… 2000 B… </span><span style='color: #BB0000;'>NA</span><span>        King… TN      </span><span style='text-decoration: underline;'>37</span><span>660 Sulli…     36.6
-#&gt; </span><span style='color: #555555;'> 3</span><span> AMG … Short Term Acu… 801 N … 3rd Fl    Gree… IN      </span><span style='text-decoration: underline;'>46</span><span>140 Hanco…     39.8
-#&gt; </span><span style='color: #555555;'> 4</span><span> Hanc… Short Term Acu… 801 N … </span><span style='color: #BB0000;'>NA</span><span>        Gree… IN      </span><span style='text-decoration: underline;'>46</span><span>140 Hanco…     39.8
-#&gt; </span><span style='color: #555555;'> 5</span><span> Ohio… Short Term Acu… 300 W … </span><span style='color: #BB0000;'>NA</span><span>        Colu… OH      </span><span style='text-decoration: underline;'>43</span><span>210 Frank…     40.0
-#&gt; </span><span style='color: #555555;'> 6</span><span> Ohio… Short Term Acu… 410 W … </span><span style='color: #BB0000;'>NA</span><span>        Colu… OH      </span><span style='text-decoration: underline;'>43</span><span>210 Frank…     40.0
-#&gt; </span><span style='color: #555555;'> 7</span><span> The … Short Term Acu… 460 W … </span><span style='color: #BB0000;'>NA</span><span>        Colu… OH      </span><span style='text-decoration: underline;'>43</span><span>210 Frank…     40.0
-#&gt; </span><span style='color: #555555;'> 8</span><span> Prov… Childrens Hosp… 101 W … </span><span style='color: #BB0000;'>NA</span><span>        Spok… WA      </span><span style='text-decoration: underline;'>99</span><span>204 Spoka…     47.6
-#&gt; </span><span style='color: #555555;'> 9</span><span> Inla… Psychiatric Ho… 104 W … </span><span style='color: #BB0000;'>NA</span><span>        Spok… WA      </span><span style='text-decoration: underline;'>99</span><span>204 Spoka…     47.7
-#&gt; </span><span style='color: #555555;'>10</span><span> Shri… Childrens Hosp… 911 W … </span><span style='color: #BB0000;'>NA</span><span>        Spok… WA      </span><span style='text-decoration: underline;'>99</span><span>204 Spoka…     47.7
-#&gt; </span><span style='color: #555555;'># … with 6,338 more rows, and 14 more variables: Longitude </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `Staffed All
-#&gt; #   Beds` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `Staffed ICU Beds` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `Licensed All Beds` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `All Bed
-#&gt; #   Occupancy Rate` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `ICU Bed Occupancy Rate` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `Staffed All Beds -
-#&gt; #   SOURCE` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Staffed ICU Beds - SOURCE` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Licensed All Beds -
-#&gt; #   SOURCE` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `All Bed Occupancy Rate - SOURCE` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `ICU Bed Occupancy
-#&gt; #   Rate - SOURCE` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, CCM_ID </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `DH-OBJECTID` </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `HCRIS-Provider
-#&gt; #   Number` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div><div class='input'>
-</div></span></pre>
+#&gt;    &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1 Cree… Psychiatric Ho… 1025 E… &lt;NA&gt;      King… TN      37660 Sulli…     36.5
+#&gt;  2 Indi… Short Term Acu… 2000 B… &lt;NA&gt;      King… TN      37660 Sulli…     36.6
+#&gt;  3 AMG … Short Term Acu… 801 N … 3rd Fl    Gree… IN      46140 Hanco…     39.8
+#&gt;  4 Hanc… Short Term Acu… 801 N … &lt;NA&gt;      Gree… IN      46140 Hanco…     39.8
+#&gt;  5 Ohio… Short Term Acu… 300 W … &lt;NA&gt;      Colu… OH      43210 Frank…     40.0
+#&gt;  6 Ohio… Short Term Acu… 410 W … &lt;NA&gt;      Colu… OH      43210 Frank…     40.0
+#&gt;  7 The … Short Term Acu… 460 W … &lt;NA&gt;      Colu… OH      43210 Frank…     40.0
+#&gt;  8 Prov… Childrens Hosp… 101 W … &lt;NA&gt;      Spok… WA      99204 Spoka…     47.6
+#&gt;  9 Inla… Psychiatric Ho… 104 W … &lt;NA&gt;      Spok… WA      99204 Spoka…     47.7
+#&gt; 10 Shri… Childrens Hosp… 911 W … &lt;NA&gt;      Spok… WA      99204 Spoka…     47.7
+#&gt; # … with 6,338 more rows, and 14 more variables: Longitude &lt;dbl&gt;, `Staffed All
+#&gt; #   Beds` &lt;dbl&gt;, `Staffed ICU Beds` &lt;dbl&gt;, `Licensed All Beds` &lt;dbl&gt;, `All Bed
+#&gt; #   Occupancy Rate` &lt;dbl&gt;, `ICU Bed Occupancy Rate` &lt;dbl&gt;, `Staffed All Beds -
+#&gt; #   SOURCE` &lt;chr&gt;, `Staffed ICU Beds - SOURCE` &lt;chr&gt;, `Licensed All Beds -
+#&gt; #   SOURCE` &lt;chr&gt;, `All Bed Occupancy Rate - SOURCE` &lt;chr&gt;, `ICU Bed Occupancy
+#&gt; #   Rate - SOURCE` &lt;chr&gt;, CCM_ID &lt;dbl&gt;, `DH-OBJECTID` &lt;dbl&gt;, `HCRIS-Provider
+#&gt; #   Number` &lt;chr&gt;</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
