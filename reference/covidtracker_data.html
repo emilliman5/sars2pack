@@ -170,37 +170,25 @@ district currently reporting that data.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>covidtracker_data</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
 #&gt; <span class='message'>cols(</span>
-#&gt; <span class='message'>  date = col_double(),</span>
+#&gt; <span class='message'>  .default = col_double(),</span>
 #&gt; <span class='message'>  state = col_character(),</span>
-#&gt; <span class='message'>  positive = col_double(),</span>
-#&gt; <span class='message'>  negative = col_double(),</span>
-#&gt; <span class='message'>  pending = col_double(),</span>
-#&gt; <span class='message'>  hospitalized = col_double(),</span>
-#&gt; <span class='message'>  death = col_double(),</span>
-#&gt; <span class='message'>  total = col_double(),</span>
 #&gt; <span class='message'>  hash = col_character(),</span>
 #&gt; <span class='message'>  dateChecked = col_datetime(format = ""),</span>
-#&gt; <span class='message'>  totalTestResults = col_double(),</span>
-#&gt; <span class='message'>  fips = col_character(),</span>
-#&gt; <span class='message'>  deathIncrease = col_double(),</span>
-#&gt; <span class='message'>  hospitalizedIncrease = col_double(),</span>
-#&gt; <span class='message'>  negativeIncrease = col_double(),</span>
-#&gt; <span class='message'>  positiveIncrease = col_double(),</span>
-#&gt; <span class='message'>  totalTestResultsIncrease = col_double()</span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; # A tibble: 1,485 x 9
+#&gt; <span class='message'>  fips = col_character()</span>
+#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; # A tibble: 1,541 x 9
 #&gt;    date       state positive negative pending hospitalized death
 #&gt;    &lt;date&gt;     &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;
-#&gt;  1 2020-04-01 AK         133     4470      NA            9     3
-#&gt;  2 2020-04-01 AL        1077     6697      NA           NA    26
-#&gt;  3 2020-04-01 AR         584     7354      NA           90    10
-#&gt;  4 2020-04-01 AS           0       20       6           NA     0
-#&gt;  5 2020-04-01 AZ        1413    19645      NA          149    29
-#&gt;  6 2020-04-01 CA        8155    21772   57400         1855   171
-#&gt;  7 2020-04-01 CO        2966    13883      NA          509    69
-#&gt;  8 2020-04-01 CT        3557    13043      NA          766    85
-#&gt;  9 2020-04-01 DC         586     3262       2           NA    11
-#&gt; 10 2020-04-01 DE         368     4015      NA           57    11
-#&gt; # … with 1,475 more rows, and 2 more variables: dateChecked &lt;dttm&gt;, fips &lt;chr&gt;</div><div class='input'>
+#&gt;  1 2020-04-02 AK         143     4879      NA            9     3
+#&gt;  2 2020-04-02 AL        1233     7503      NA           NA    32
+#&gt;  3 2020-04-02 AR         643     7880      NA           NA    12
+#&gt;  4 2020-04-02 AS           0       20       6           NA     0
+#&gt;  5 2020-04-02 AZ        1598    21111      NA          228    32
+#&gt;  6 2020-04-02 CA        9191    23809   59500           NA   203
+#&gt;  7 2020-04-02 CO        3342    15303      NA          620    80
+#&gt;  8 2020-04-02 CT        3824    14476      NA           NA   112
+#&gt;  9 2020-04-02 DC         653     4417      NA           NA    12
+#&gt; 10 2020-04-02 DE         393     4566      NA           NA    12
+#&gt; # … with 1,531 more rows, and 2 more variables: dateChecked &lt;dttm&gt;, fips &lt;chr&gt;</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
