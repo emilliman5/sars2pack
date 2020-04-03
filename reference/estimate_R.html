@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>constructor for covid_events — cumulative_events_ejhu • sars2pack</title>
+<title>estimate R0 — estimate_R • sars2pack</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="constructor for covid_events — cumulative_events_ejhu" />
-<meta property="og:description" content="constructor for covid_events" />
+<meta property="og:title" content="estimate R0 — estimate_R" />
+<meta property="og:description" content="estimate R0" />
 
 
 
@@ -124,49 +124,19 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>constructor for covid_events</h1>
-    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/ejhu.R'><code>R/ejhu.R</code></a></small>
-    <div class="hidden name"><code>cumulative_events_ejhu.Rd</code></div>
+    <h1>estimate R0</h1>
+    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/plotter.R'><code>R/plotter.R</code></a></small>
+    <div class="hidden name"><code>estimate_R.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>constructor for covid_events</p>
+    <p>estimate R0</p>
     </div>
 
-    <pre class="usage"><span class='fu'>cumulative_events_ejhu</span>(
-  <span class='no'>src</span>,
-  <span class='kw'>eventtype</span> <span class='kw'>=</span> <span class='st'>"confirmed"</span>,
-  <span class='kw'>alpha3</span> <span class='kw'>=</span> <span class='st'>"USA"</span>,
-  <span class='kw'>ProvinceStateName</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
-)</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>src</th>
-      <td><p>as retrieved with enhanced_jhu_data</p></td>
-    </tr>
-    <tr>
-      <th>eventtype</th>
-      <td><p>character(1) 'confirmed' or 'deaths'</p></td>
-    </tr>
-    <tr>
-      <th>alpha3</th>
-      <td><p>character(1) code for country</p></td>
-    </tr>
-    <tr>
-      <th>ProvinceStateName</th>
-      <td><p>character(1) for province, default to NULL</p></td>
-    </tr>
-    </table>
+    <pre class="usage"><span class='fu'>estimate_R</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'><a href='enriched_jhu_data.html'>enriched_jhu_data</a></span>()</div><div class='output co'>#&gt; <span class='warning'>Warning: Some values were not matched unambiguously: MS Zaandam</span></div><div class='input'><span class='no'>cchn</span> <span class='kw'>=</span> <span class='fu'>cumulative_events_ejhu</span>(<span class='no'>dat</span>, <span class='kw'>alpha3</span><span class='kw'>=</span><span class='st'>"CHN"</span>, <span class='kw'>ProvinceStateName</span><span class='kw'>=</span><span class='st'>"Hubei"</span>)
-<span class='no'>ichn</span> <span class='kw'>=</span> <span class='fu'><a href='form_incident_events.html'>form_incident_events</a></span>(<span class='no'>cchn</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>cchn</span>$<span class='no'>count</span>[-<span class='fl'>1</span>], <span class='no'>ichn</span>$<span class='no'>count</span>, <span class='kw'>log</span><span class='kw'>=</span><span class='st'>"xy"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"cumulative"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"new"</span>,
- <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Hubei province"</span>) <span class='co'># like https://youtu.be/54XLXg4fYsc</span></div><div class='output co'>#&gt; <span class='warning'>Warning: 17 y values &lt;= 0 omitted from logarithmic plot</span></div><div class='img'><img src='cumulative_events_ejhu-1.png' alt='' width='700' height='433' /></div></pre>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

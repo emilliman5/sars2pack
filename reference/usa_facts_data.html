@@ -83,7 +83,7 @@ data included." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">sars2pack</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.16</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.18</span>
       </span>
     </div>
 
@@ -182,17 +182,19 @@ data-loving community.</p>
 
     <div class='dont-index'><p>jhu_data()</p>
 <p>Other data-import: 
+<code><a href='beoutbreakprepared_data.html'>beoutbreakprepared_data</a>()</code>,
 <code><a href='covidtracker_data.html'>covidtracker_data</a>()</code>,
 <code><a href='jhu_data.html'>jhu_data</a>()</code>,
+<code><a href='kff_icu_beds.html'>kff_icu_beds</a>()</code>,
 <code><a href='nytimes_county_data.html'>nytimes_county_data</a>()</code>,
 <code><a href='us_county_geo_details.html'>us_county_geo_details</a>()</code>,
 <code><a href='us_healthcare_capacity.html'>us_healthcare_capacity</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>usa_facts_data</span>()
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; [1] "county_fips" "state"       "State"       "state_fips"  "subset"     
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; [1] "county_fips" "county"      "state"       "state_fips"  "subset"     
 #&gt; [6] "date"        "count"      </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 7
-#&gt;   county_fips state                 State state_fips subset    date       count
+#&gt;   county_fips county                state state_fips subset    date       count
 #&gt;         &lt;dbl&gt; &lt;chr&gt;                 &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;date&gt;     &lt;dbl&gt;
 #&gt; 1           0 Statewide Unallocated AL             1 confirmed 2020-01-22     0
 #&gt; 2           0 Statewide Unallocated AL             1 confirmed 2020-01-23     0
@@ -200,7 +202,7 @@ data-loving community.</p>
 #&gt; 4           0 Statewide Unallocated AL             1 confirmed 2020-01-25     0
 #&gt; 5           0 Statewide Unallocated AL             1 confirmed 2020-01-26     0
 #&gt; 6           0 Statewide Unallocated AL             1 confirmed 2020-01-27     0</div><div class='input'><span class='co'># dataset inclusion as of this build</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>res</span>$<span class='no'>date</span>)</div><div class='output co'>#&gt; [1] "2020-04-01"</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>res</span>$<span class='no'>date</span>)</div><div class='output co'>#&gt; [1] "2020-04-02"</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

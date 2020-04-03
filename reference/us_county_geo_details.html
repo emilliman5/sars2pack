@@ -82,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">sars2pack</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.16</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.18</span>
       </span>
     </div>
 
@@ -146,14 +146,17 @@
 
     <div class='dont-index'><p><a href='https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html'>https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html</a></p>
 <p>Other data-import: 
+<code><a href='beoutbreakprepared_data.html'>beoutbreakprepared_data</a>()</code>,
 <code><a href='covidtracker_data.html'>covidtracker_data</a>()</code>,
 <code><a href='jhu_data.html'>jhu_data</a>()</code>,
+<code><a href='kff_icu_beds.html'>kff_icu_beds</a>()</code>,
 <code><a href='nytimes_county_data.html'>nytimes_county_data</a>()</code>,
 <code><a href='us_healthcare_capacity.html'>us_healthcare_capacity</a>()</code>,
 <code><a href='usa_facts_data.html'>usa_facts_data</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>usc</span> <span class='kw'>=</span> <span class='fu'>us_county_geo_details</span>()</div><div class='output co'>#&gt; <span class='message'>using temporary cache /tmp/RtmpjYfB2r/BiocFileCache</span></div><div class='input'><span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>usc</span>)</div><div class='output co'>#&gt; Rows: 3,220
+    <pre class="examples"><div class='input'><span class='no'>usc</span> <span class='kw'>=</span> <span class='fu'>us_county_geo_details</span>()
+<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>usc</span>)</div><div class='output co'>#&gt; Rows: 3,220
 #&gt; Columns: 9
 #&gt; $ state           &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
 #&gt; $ fips            &lt;chr&gt; "01001", "01003", "01005", "01007", "01009", "01011",…
