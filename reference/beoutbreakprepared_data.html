@@ -133,8 +133,18 @@
     <p>United States state and county level data from USAFacts</p>
     </div>
 
-    <pre class="usage"><span class='fu'>beoutbreakprepared_data</span>()</pre>
+    <pre class="usage"><span class='fu'>beoutbreakprepared_data</span>(<span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>quietly</th>
+      <td><p>logical(1) defaults to TRUE.  If FALSE, warnings generated during
+parsing will be displayed.  These often relate to nonstandard date values that
+occur idiosyncratically.</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
@@ -146,9 +156,11 @@
 
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    
-
-
+    <p>This is individual level data, collected upstream of
+this package from diverse sources.  Date values in particular
+can be non-standard.  If you wish to introduce corrections for
+poorly formated data, see the argument to <code>read.csv</code> in the source
+code of this function and acquire the table manually.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other data-import: 
@@ -161,7 +173,7 @@
 <code><a href='usa_facts_data.html'>usa_facts_data</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>beoutbreakprepared_data</span>()</div><div class='output co'>#&gt; <span class='message'>using temporary cache /tmp/Rtmpvp7viF/BiocFileCache</span></div><div class='output co'>#&gt; <span class='warning'>Warning:  3413 failed to parse.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: All formats failed to parse. No formats found.</span></div><div class='output co'>#&gt; <span class='warning'>Warning:  257913 failed to parse.</span></div><div class='output co'>#&gt; <span class='warning'>Warning:  1865 failed to parse.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: All formats failed to parse. No formats found.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt;  [1] "ID"                       "age"                     
+    <pre class="examples"><div class='input'><span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>beoutbreakprepared_data</span>()</div><div class='output co'>#&gt; <span class='message'>using temporary cache /tmp/RtmpbIhfpj/BiocFileCache</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt;  [1] "ID"                       "age"                     
 #&gt;  [3] "sex"                      "city"                    
 #&gt;  [5] "province"                 "country"                 
 #&gt;  [7] "wuhan(0)_not_wuhan(1)"    "latitude"                

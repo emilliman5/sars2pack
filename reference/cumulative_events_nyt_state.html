@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>US State-level data including test results — covidtracker_data • sars2pack</title>
+<title>create cumulative_events instance for state data from NYT — cumulative_events_nyt_state • sars2pack</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="US State-level data including test results — covidtracker_data" />
-<meta property="og:description" content="Get data from the COVID tracking project
-https://covidtracking.com/ including daily historical data on
-testing results, hospitalizations, and deaths." />
+<meta property="og:title" content="create cumulative_events instance for state data from NYT — cumulative_events_nyt_state" />
+<meta property="og:description" content="create cumulative_events instance for state data from NYT" />
 
 
 
@@ -126,72 +124,46 @@ testing results, hospitalizations, and deaths." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>US State-level data including test results</h1>
-    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/covidtracking_com.R'><code>R/covidtracking_com.R</code></a></small>
-    <div class="hidden name"><code>covidtracker_data.Rd</code></div>
+    <h1>create cumulative_events instance for state data from NYT</h1>
+    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/nyt.R'><code>R/nyt.R</code></a></small>
+    <div class="hidden name"><code>cumulative_events_nyt_state.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get data from the COVID tracking project
-<a href='https://covidtracking.com/'>https://covidtracking.com/</a> including daily historical data on
-testing results, hospitalizations, and deaths.</p>
+    <p>create cumulative_events instance for state data from NYT</p>
     </div>
 
-    <pre class="usage"><span class='fu'>covidtracker_data</span>()</pre>
+    <pre class="usage"><span class='fu'>cumulative_events_nyt_state</span>(
+  <span class='no'>src</span>,
+  <span class='kw'>eventtype</span> <span class='kw'>=</span> <span class='st'>"confirmed"</span>,
+  <span class='kw'>statename</span> <span class='kw'>=</span> <span class='st'>"Massachusetts"</span>
+)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>src</th>
+      <td><p>a tibble</p></td>
+    </tr>
+    <tr>
+      <th>eventtype</th>
+      <td><p>character(1) 'confirmed' or 'deaths'</p></td>
+    </tr>
+    <tr>
+      <th>statename</th>
+      <td><p>character(1) state name</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A tidy <code>tbl_df</code></p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>From the COVID Tracking Project website:</p>
-<p>The COVID Tracking Project collects information from 50 US states,
-the District of Columbia, and 5 other US territories to provide the
-most comprehensive testing data we can collect for the novel
-coronavirus, SARS-CoV-2. We attempt to report positive and negative
-results, pending tests, and total people tested for each state or
-district currently reporting that data.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'>
-<ul>
-<li><p><a href='https://covidtracking.com/about-tracker/'>https://covidtracking.com/about-tracker/</a></p></li>
-<li><p><a href='https://covidtracking.com/notes/'>https://covidtracking.com/notes/</a></p></li>
-</ul>
-
-<p>Other data-import: 
-<code><a href='beoutbreakprepared_data.html'>beoutbreakprepared_data</a>()</code>,
-<code><a href='jhu_data.html'>jhu_data</a>()</code>,
-<code><a href='kff_icu_beds.html'>kff_icu_beds</a>()</code>,
-<code><a href='nytimes_county_data.html'>nytimes_county_data</a>()</code>,
-<code><a href='us_county_geo_details.html'>us_county_geo_details</a>()</code>,
-<code><a href='us_healthcare_capacity.html'>us_healthcare_capacity</a>()</code>,
-<code><a href='usa_facts_data.html'>usa_facts_data</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>covidtracker_data</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
-#&gt; <span class='message'>cols(</span>
-#&gt; <span class='message'>  .default = col_double(),</span>
-#&gt; <span class='message'>  state = col_character(),</span>
-#&gt; <span class='message'>  hash = col_character(),</span>
-#&gt; <span class='message'>  dateChecked = col_datetime(format = ""),</span>
-#&gt; <span class='message'>  fips = col_character()</span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; # A tibble: 1,597 x 9
-#&gt;    date       state positive negative pending hospitalized death
-#&gt;    &lt;date&gt;     &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;
-#&gt;  1 2020-04-03 AK         157     5859      NA           15     3
-#&gt;  2 2020-04-03 AL        1432     8187      NA           NA    35
-#&gt;  3 2020-04-03 AR         704     8995      NA           NA    12
-#&gt;  4 2020-04-03 AS           0       20       6           NA     0
-#&gt;  5 2020-04-03 AZ        1769    22904      NA          249    41
-#&gt;  6 2020-04-03 CA       10701    24599   59500           NA   237
-#&gt;  7 2020-04-03 CO        3728    16683      NA          710    97
-#&gt;  8 2020-04-03 CT        4914    15101      NA           NA   131
-#&gt;  9 2020-04-03 DC         757     4827      NA           NA    15
-#&gt; 10 2020-04-03 DE         450     4995      NA           NA    14
-#&gt; # … with 1,587 more rows, and 2 more variables: dateChecked &lt;dttm&gt;, fips &lt;chr&gt;</div><div class='input'>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>nyt</span> <span class='kw'>=</span> <span class='fu'><a href='nytimes_county_data.html'>nytimes_state_data</a></span>()
+<span class='no'>mass</span> <span class='kw'>=</span> <span class='fu'>cumulative_events_nyt_state</span>(<span class='no'>nyt</span>, <span class='kw'>eventtype</span> <span class='kw'>=</span> <span class='st'>"confirmed"</span>,
+   <span class='kw'>statename</span> <span class='kw'>=</span> <span class='st'>"Massachusetts"</span>)
+<span class='no'>mass</span></div><div class='output co'>#&gt;  
+#&gt; use plot() to visualize.</div><div class='input'><span class='no'>imass</span> <span class='kw'>=</span> <span class='fu'><a href='form_incident_events.html'>form_incident_events</a></span>(<span class='fu'><a href='trim_from.html'>trim_from</a></span>(<span class='no'>mass</span>, <span class='st'>"2020-03-01"</span>))
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>imass</span>)</div><div class='img'><img src='cumulative_events_nyt_state-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
