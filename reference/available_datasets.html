@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>simple function to munge JHU data into long-form tibble — .munge_data_from_jhu • sars2pack</title>
+<title>list and detail available sars2pack datasets — available_datasets • sars2pack</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="simple function to munge JHU data into long-form tibble — .munge_data_from_jhu" />
-<meta property="og:description" content="This function takes one of three subsets--confirmed,
-deaths, recovered--and munges." />
+<meta property="og:title" content="list and detail available sars2pack datasets — available_datasets" />
+<meta property="og:description" content="list and detail available sars2pack datasets" />
 
 
 
@@ -125,31 +124,40 @@ deaths, recovered--and munges." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>simple function to munge JHU data into long-form tibble</h1>
-    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/jhu_data.R'><code>R/jhu_data.R</code></a></small>
-    <div class="hidden name"><code>dot-munge_data_from_jhu.Rd</code></div>
+    <h1>list and detail available sars2pack datasets</h1>
+    <small class="dont-index">Source: <a href='https://github.com/seandavi/sars2pack/blob/master/R/data_catalog.R'><code>R/data_catalog.R</code></a></small>
+    <div class="hidden name"><code>available_datasets.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function takes one of three subsets--confirmed,
-deaths, recovered--and munges.</p>
+    <p>list and detail available sars2pack datasets</p>
     </div>
 
-    <pre class="usage"><span class='fu'>.munge_data_from_jhu</span>(<span class='no'>subset</span>)</pre>
+    <pre class="usage"><span class='fu'>available_datasets</span>()</pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>subset</th>
-      <td><p>character(1) of Confirmed, Deaths, Recovered</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a long-form tibble</p>
+    <p>A data.frame with columns:</p><ul>
+<li><p>name: the short name of the dataset</p></li>
+<li><p>accessor: accessor function</p></li>
+</ul>
 
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>available_datasets</span>()</div><div class='output co'>#&gt; <span class='warning'>Warning: Outer names are only allowed for unnamed scalar atomic inputs</span></div><div class='output co'>#&gt; # A tibble: 9 x 2
+#&gt;   name                                          accessor               
+#&gt;   &lt;chr&gt;                                         &lt;chr&gt;                  
+#&gt; 1 beoutbreakprepared                            beoutbreakprepared_data
+#&gt; 2 USA Facts                                     usa_facts_data         
+#&gt; 3 Johns Hopkins dataset                         jhu_data               
+#&gt; 4 New York Times county level data              nytimes_county_data    
+#&gt; 5 New York Times county level data              nytimes_state_data     
+#&gt; 6 Kaiser Family Foundation ICU bed data         kff_icu_beds           
+#&gt; 7 United States county-level geographic details us_county_geo_details  
+#&gt; 8 CovidTracker data                             covidtracker_data      
+#&gt; 9 CovidCare United States Healthcare Capacity   us_healthcare_capacity </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
